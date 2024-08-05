@@ -4,7 +4,7 @@ pipeline {
     environment {
         NETLIFY_SITE_ID = 'bc60ee24-c2dc-4b8c-a02b-494423e7dfe8'
         NETLIFY_AUTH_TOKEN = credentials('netlify-token')
-        REACT_APP_VERSION= '1.2.3'
+        REACT_APP_VERSION= "1.0.$BUILD_ID"
     }
 
     stages {
@@ -125,7 +125,7 @@ pipeline {
             }
 
             environment {
-                CI_ENVIRONMENT_URL = 'YOUR NETLIFY URL'
+                CI_ENVIRONMENT_URL = 'https://stately-pixie-d6c9a9.netlify.app/'
             }
 
             steps {
